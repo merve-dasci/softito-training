@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renk Gösterimi</title>
+</head>
+<body>
+   <form action="">
+    <label for="isim">Adınızı giriniz</label>
+    <input type="text" id="isim" placeholder="Adınız..">
+
+    <label for="soyisim">Soyadınızı giriniz</label>
+    <input type="text" id="soyisim" placeholder="Soyadınız..">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Email..">
+
+    <label for="telNo">Telefon numaranızı giriniz</label>
+    <input type="tel" id="telNo" placeholder="Tel No:">
+
+    <input type="file" id="dosya">
+
+    <button type="submit" id="myBtn">Gönder</button>
+   </form>
+
+ 
+   <div id="sonucAlani" style="margin-top: 20px; font-family: Arial; padding: 10px; border: 1px solid #ccc; display: none;">
+      <h3>Gönderilen Bilgiler:</h3>
+      <p id="sonucIsim"></p>
+      <p id="sonucSoyisim"></p>
+      <p id="sonucEmail"></p>
+      <p id="sonucTel"></p>
+      <p id="sonucDosya"></p>
+   </div>
+
+   <script>
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', function(e){
+        e.preventDefault(); 
+        
+        
+        let name = document.getElementById('isim').value;
+        let lastName = document.getElementById('soyisim').value;
+        let mail = document.getElementById('email').value;
+        let tel = document.getElementById('telNo').value;
+        
+       
+        let fileInput = document.getElementById('dosya');
+        let fileName = fileInput.files.length > 0 ? fileInput.files[0].name : "Dosya seçilmedi";
+
+        
+        document.getElementById('sonucIsim').textContent = "Adı: " + name;
+        document.getElementById('sonucSoyisim').textContent = "Soyadı: " + lastName;
+        document.getElementById('sonucEmail').textContent = "E-posta: " + mail;
+        document.getElementById('sonucTel').textContent = "Telefon: " + tel;
+        document.getElementById('sonucDosya').textContent = "Dosya: " + fileName;
+
+        
+        document.getElementById('sonucAlani').style.display = "block";
+
+        form.reset();
+    });
+   </script>
+</body>
+
+</html>

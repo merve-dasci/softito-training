@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Merhaba Arkadaşlar</h1>
+    <p id="pr">Javascript Öğreniyorum...</p>
+    <button id="myBtn">Değiştir</button>
+    <input type="text" placeholder="Adınızı giriniz.." id="kullanici">
+    <script>
+        let tiklamaSayisi = 0;
+        const yazi = document.getElementById('pr');
+        const buton = document.getElementById('myBtn');
+        const input = document.getElementById('kullanici');
+        buton.addEventListener('click', function(){
+            
+            tiklamaSayisi++;
+            if(tiklamaSayisi < 2){
+                yazi.textContent = "Javascript Öğrendim...";
+            } else if(tiklamaSayisi == 2){
+                yazi.textContent = "Beyza Mensur";
+            }
+          
+
+            
+        });
+         input.addEventListener('change', function() {
+            let yazi = this.value;
+                
+                setTimeout{() => console.log(yazi, 2000)};
+            });
+
+    </script>
+
+</body>
+</html>
