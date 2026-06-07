@@ -16,26 +16,32 @@
         </div>
     </div>
     <script>
-        let count = 0;
-        const box = document.getElementById('box');
-        const number = document.getElementById('number');
-        function change(e) {
-            count += e;
-            console.log(count);
-            number.textContent=count;
-            if(count > 0) {
-                box.className="bg-green-100 p-8 rounded-xl shadow text-center transition-colors duration-300";
-            } else if (count <0) {
-                box.className="bg-red-100 p-8 rounded-xl shadow text-center transition-colors duration-300";
+    let count = 0;
 
-            } else {
-                box.className="bg-white-100 p-8 rounded-xl shadow text-center transition-colors duration-300";
+    const box = document.getElementById('box');
+    const number = document.getElementById('number');
 
-            }
+    function change(value) {
+        count += value;
+        number.textContent = count;
+
+        // Renk seviyesi (100, 200, 300, 400, 500)
+        let level = Math.min(Math.abs(count), 5) * 100;
+
+        if (count > 0) {
+            box.className =
+                `bg-green-${level} p-8 rounded-xl shadow text-center transition-colors duration-300`;
         }
-        
-
-    </script>
+        else if (count < 0) {
+            box.className =
+                `bg-red-${level} p-8 rounded-xl shadow text-center transition-colors duration-300`;
+        }
+        else {
+            box.className =
+                "bg-white p-8 rounded-xl shadow text-center transition-colors duration-300";
+        }
+    }
+</script>
     
 </body>
 </html>
