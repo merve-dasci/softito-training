@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!-- Tarayıcıya bu dosyanın HTML5 formatında olduğunu söyler. -->
+
+<html lang="en"> <!-- HTML sayfası başlar, sayfa dilinin İngilizce olduğunu belirtir. -->
+
+<head>
+
+    <meta charset="UTF-8"> <!-- Türkçe karakterler dahil tüm karakterlerin düzgün görünmesini sağlar. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sayfanın telefon, tablet ve bilgisayarda düzgün ölçeklenmesini sağlar. -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"> <!-- Tailwind CSS kütüphanesini sayfaya dahil eder. -->
+
+    <title>Document</title> <!-- Tarayıcı sekmesinde görünecek başlığı belirler. -->
+
+</head> <!-- Head bölümü biter. -->
+
+
+<body class="bg-indigo-50 text-gray-800 font-sans min-h-screen p-8 flex flex-col items-center justify-center gap-6">
+<!-- Body sayfanın görünen kısmıdır.
+bg-indigo-50: arka planı açık indigo yapar.
+text-gray-800: yazı rengini koyu gri yapar.
+font-sans: yazı tipini sans-serif yapar.
+min-h-screen: body yüksekliğini en az ekran yüksekliği kadar yapar.
+p-8: her taraftan 8 pxboşluk verir.
+flex: flexbox yapısını başlatır.
+flex-col: elemanları dikey dizer column olarak.
+items-center: elemanları yatayda ortalar.
+justify-center: elemanları dikeyde ortalar.
+gap-6: elemanlar arasına 6 px boşluk koyar. -->
+
+    <div class="text-center max-w-md"> <!-- text-center yazıları ortalar, max-w-md genişliği sınırlar. tablet genişliği. -->
+
+        <div>
+
+            <h1 class="text-xl font-bold text-gray-900 mb-2">Fiyatlandırma Kartı Flex Column</h1>
+            <!-- h1 ana başlıktır en büyük başlık, h6ya doğru küçülerek gidiyor.
+            text-xl: yazıyı büyük yapar.
+            font-bold: yazıyı kalın yapar.
+            text-gray-900: yazıyı çok koyu gri yapar.
+            mb-2: başlığın altına boşluk verir. margin-bottom-->
+
+            <p class="text-xs text-gray-500">
+            <!--
+            text-xs: yazıyı küçük yapar.
+            text-gray-500: yazıyı açık gri yapar. -->
+                Kart elemanları üst üste sıralamak için flex-col, öne çıkan rozeti en üstte görmek için ise order-first sınıfı kullanacağız
+            </p>
+
+        </div> 
+
+
+        <div class="w-full max-w-xs bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
+        <!-- Fiyatlandırma kartını yaptık burada.
+        w-full: bulunduğu alan kadar genişlik alır.
+        max-w-xs: maksimum genişliği küçük boyutta sınırlar.
+        bg-white: arka planı beyaz yapar.
+        border: kenarlık ekler.
+        border-gray-200: kenarlık rengini açık gri yapar.
+        rounded-2xl: köşeleri yuvarlatır.
+        p-6: 6px iç boşluk verir.
+        flex: flexbox yapısını başlatır.
+        flex-col: içindeki elemanları alt alta dizer.
+        gap-4: kart içindeki elemanlar arasına 4 px boşluk koyar.
+        shadow-sm: hafif gölge verir. small -->
+
+            <div> 
+
+                <h2 class="text-sm font-bold text-gray-800 uppercase tracking-wider">Standart Paket</h2>
+                <! Paketleri burada yazdık.
+                text-sm: yazıyı küçük yapar.
+                font-bold: yazıyı kalın yapar.
+                text-gray-800: yazıyı koyu gri yapar.
+                uppercase: yazıyı büyük harfe çevirir.
+                tracking-wider: harfler arasındaki boşluğu artırır. -->
+
+                <p class="text-2xl font-extrabold text-gray-900 mt-1">99 TL / Ay</p>
+                <!-- Fiyat bilgisidir.
+                text-2xl: yazıyı daha büyük yapar.
+                font-extrabold: yazıyı çok kalın yapar.
+                text-gray-900: yazıyı çok koyu gri yapar.
+                mt-1: üstten küçük boşluk verir. margin top -->
+
+            </div> 
+
+
+            <div class="px-2.5 py-1 bg-indigo-100 border border-indigo-200 text-indigo-700 text-xs font-extrabold rounded-full self-start order-first uppercase tracking-wide">
+            <!-- Öne çıkan paket rozeti burada koyduk.
+            px-2.5: sağdan ve soldan iç boşluk verir.
+            py-1: üstten ve alttan iç boşluk verir.
+            bg-indigo-100: arka planı açık indigo yapar.
+            border: kenarlık ekler.
+            border-indigo-200: kenarlık rengini indigo yapar.
+            text-indigo-700: yazı rengini indigo yapar.
+            text-xs: yazıyı küçük yapar.
+            font-extrabold: yazıyı çok kalın yapar.
+            rounded-full: rozeti tamamen yuvarlak hale getirir.
+            self-start: rozeti kartın sol tarafına hizalar.
+            order-first: normalde aşağıda yazılmış olsa bile en üste taşır(araştırr).
+            uppercase: yazıyı büyük harfe çevirir.
+            tracking-wide: harf aralığını biraz açar.(araştırr) -->
+                En Popüler Paket(order-first)
+            </div>
+
+
+            <div class="text-xs text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+            <!-- Paket özelliklerini burada yazdık.
+            text-xs: yazıları küçük yapar.
+            text-gray-500: yazı rengini gri yapar.
+            space-y-2: içindeki paragrafların arasına dikey boşluk verir.
+            border-t: sadece üst kenarlık ekler border top.
+            border-gray-100: kenarlık rengini çok açık gri yapar.
+            pt-4: üstten iç boşluk verir. padding top-->
+
+                <p>1 Sınırsız Proje</p> 
+
+                <p>25 tane kişisel proje</p> 
+
+                <p>Grup çalışması</p>
+
+            </div>
+
+
+            <button class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-colors mt-2">
+            <!-- Buton oluşturduk.
+            w-full: butonu kart genişliği kadar yapar.
+            py-2: üstten ve alttan iç boşluk verir.
+            bg-indigo-600: buton arka planını indigo yapar.
+            hover:bg-indigo-700: mouse üstüne gelince rengi koyulaştırır.
+            text-white: yazıyı beyaz yapar.
+            rounded-lg: köşeleri yuvarlatır, large.
+            text-xs: yazıyı küçük yapar.
+            font-semibold: yazıyı yarı kalın yapar.
+            transition-colors: renk değişiminin yumuşak olmasını sağlar.
+            mt-2: üstten boşluk verir. margin top -->
+                Satın Al
+            </button>
+
+        </div> 
+
+    </div> 
+
+</body> 
+
+</html>

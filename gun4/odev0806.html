@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Ödev</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"/>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen p-8">
+    <div class="max-w-4xl mx-auto space-y-8">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold text-gray-900">Tailwind CSS Araştırma Ödevi</h1>
+            <p class="text-sm text-gray-500 mt-2">tracking-wide / tracking-wider / order-first / self-start ve relative kullanımı</p>
+
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-pink-500 mb-4">Tracking Sınıfları (Letter Spacing)</h2>
+            <p class="text-sm text-gray-500 mb-6">Tracking, harfler arasındaki boşlukları ayarlamak için kullanılır.</p>
+            <div class="space-y-3 text-lg">
+                <p class="tracking-tighter border p-2 rounded">tracking-tighter</p>
+                <p class="tracking-tight border p-2 rounded">tracking-tight</p>
+                <p class="tracking-normal border p-2 rounded">tracking-normal</p>
+                <p class="tracking-wide border p-2 rounded">tracking-wide</p>
+                <p class="tracking-wider border p-2 rounded">tracking-wider</p>
+                <p class="tracking-widest border p-2 rounded">tracking-widest</p>
+            </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-pink-600 mb-4">order-first ve self-start</h2>
+            <p class="text-sm text-gray-500 mb-6">order-first elemanı flex içerisindeki diğer elemanların önüne taşır. self-start ise elemanın bulunduğu satırda sola yaslanmasını sağlar.</p>
+            <div class="flex flex-col gap-4 border border-gray-100 p-4 rounded-lg">
+                <div class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold self-start order-first">En Popüler Paket</div>
+                <h3 class="font-bold text-lg">Standart Paket</h3>
+                <p class="text-gray-500 text-sm">Bu kartta rozet normalde aşağıda yazılmıştır ancak order-first sayesinde en üste taşınmıştır.</p>
+                <button class="bg-pink-600 hover:bg-pink-700 text-white rounded-lg py-2 px-4 transition-all duration-500">Satın Al</button>
+            </div>
+        </div>
+
+       <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+
+    <h2 class="text-lg font-bold text-pink-600 mb-4">relative ve absolute kullanımı</h2>
+
+    <p class="text-sm text-gray-500 mb-2">relative, absolute kullanılan çocuk elemanların hangi alanı referans alacağını belirler.</p>
+
+    <p class="text-sm text-gray-500 mb-6">absolute ise elemanı normal akıştan çıkarır ve belirtilen konuma(top, right, bottom, left) göre yerleştirir.</p>
+
+    <div class="relative bg-indigo-50 border border-indigo-200 rounded-xl h-48 p-4">
+
+        <p class="text-sm text-gray-600">Bu kutuda parent div'e relative verdik.</p>
+
+        <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">absolute rozet</div>
+
+        <p class="text-xs text-gray-500 mt-20">Pembe rozet <strong>absolute top-4 right-4</strong>kullanılarak kutunun sağ üst köşesine yerleştirilmiştir.</p>
+
+    </div>
+
+    <div class="mt-6 border border-gray-100 rounded-lg p-4">
+        <h3 class="font-bold text-sm text-gray-800 mb-3">Position Türleri</h3>
+
+        <ul class="text-sm text-gray-600 space-y-2">
+            <li><strong>static</strong> → Varsayılan konumdur.</li>
+            <li><strong>relative</strong> → Kendi konumuna göre hareket eder.</li>
+            <li><strong>absolute</strong> → En yakın relative parent'a göre konumlanır.</li>
+            <li><strong>fixed</strong> → Ekrana sabitlenir.</li>
+            <li><strong>sticky</strong> → Kaydırırken belirli noktada sabit kalır.</li>
+        </ul>
+    </div>
+
+</div>
+</div>
+    
+</body>
+</html>
