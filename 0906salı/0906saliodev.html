@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Alışveriş Listem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-50 min-h-screen p-6 text-gray-800">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow p-6">
+        <h1 class="text-2xl font-bold text-pink-600 mb-2">Akıllı Alışveriş Listem</h1>
+        <p class="text-sm text-gray-500 mb-6">Ürün ekleyip toplam harcamanı hesaplayabileceğin mini Javascript uygulaması.</p>
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+        <input type="text" id="urunAdi" placeholder="Ürün Adı" class="border rounded-lg p-3">
+          <input type="text" id="urunFiyat" placeholder="Fiyat" class="border rounded-lg p-3">
+            <input type="text" id="urunEtiket" placeholder="Etiketler (kahve, içecek)" class="border rounded-lg p-3">
+
+            </div>
+            <button class="bg-pink-500 text-white px-6 py-3 rounded-lg hover:bg-pink-600 transition" id="btn-ekle">Ürün Ekle</button>
+            <div class="mt-4 flex gap-3">
+                <button id="btnBaslat" class="bg-green-500 text-white px-4 py-2 rounded-lg">Sayaç Başlat</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-lg" id="btnDurdur">Sayaç Durdur</button>
+            </div>
+            <div class="mt-3 font-bold text-pink-600" id="sureGostergesi">Süre: 0 saniye</div>
+            <div class="mt-4">
+                <input type="text" id="aramaKutusu" placeholder="Ürün Ara..." class="border rounded-lg p-3 w-full"> 
+                <div id="bulunanUrun" class="mt-2 text-sm text-pink-600 font-semibold"></div>
+            </div>
+            <div class="mt-8">
+                <div id="toplamTutar" class="mb-4 font-bold text-lg text-pink-600"> Toplam Harcama: 0 TL</div>
+                <div class="mb-4 font-semibold text-gray-600" id="pahaliKontrol">
+                    Henüz pahalı ürün kontrolü yapılmadı.
+                </div>
+                <div class="mb-4 font-semibold text-gray-600" id="etiketKontrol">
+                    Henüz etiket kontrolü yapılmadı.
+                </div>
+                <h2 class="font-bold text-lg mb-3">Ürünler</h2>
+                <div id="urunListesi" class="space-y-3"></div>
+            </div>
+
+    </div>
+
+    <script>
+        const urunler = [];
+        const btnEkle = document.getElementById('btn-ekle');
+        const urunAdi = document.getElementById('urunAdi');
+        const urunFiyat = document.getElementById('urunFiyat');
+        const urunEtiket = document.getElementById('urunEtiket');
+        const urunListesi = document.getElementById('urunListesi');
+        const aramaKutusu = document.getElementById('aramaKutusu');
+        const toplamTutar = document.getElementById('toplamTutar');
+        const pahaliKontrol = document.getElementById('pahaliKontrol');
+        const etiketKontrol = document.getElementById('etiketKontrol');
+        const bulunanUrun = document.getElementById('bulunanUrun');
+        const btnBaslat = document.getElementById('btnBaslat');
+        const btnDurdur = document.getElementById('btnDurdur');
+        const sureGostergesi = document.getElementById('sureGostergesi');
+
+      
+     
+        function urunleriGoster(){
+             const arananKelime = aramaKutusu.value.toLowerCase();
+
+             const ilkBulunanUrun = urunler.find((urun) => {
+                return urun.ad.toLowerCase().includes(arananKelime);
+             })
+
+              const filtrelenmisUrunler = urunler.filter((urun) => {
+            return urun.ad.toLowerCase().includes(arananKelime);
+        });
+            urunListesi.innerHTML = filtrelenmisUrunler.map((urun) => {
+                return `
+                <div class="border rounded-lg p-4 bg-pink-50">
+                    <h3 class="font-bold text-pink-600">${urun.ad}</h3>
+                    <p>Fiyat: ${urun.fiyat} TL</p>
+                    <p>Etiketler: ${urun.etiket.split(',').map((etiket) => {
+                        return etiket.trim().toUpperCase();
+                    }).join(' | ')}</p>
+                    
+                    </div>`;
+            }).join('');
+
+        const toplam = urunler.reduce((toplam, urun) => {
+                return toplam + urun.fiyat;
+        }, 0);
+
+        toplamTutar.innerText = `Toplam Harcama: ${toplam} TL`;
+
+        const pahaliUrunVarMi = urunler.some((urun) => {
+            return urun.fiyat > 200;
+        });
+
+        if(pahaliUrunVarMi) {
+            pahaliKontrol.innerText = "200 TL'den pahalı ürün var.";
+        } else {
+            pahaliKontrol.innerText = "Tüm ürünler 200 TL altında.";
+        }
+        const hepsindeEtiketVarMi = urunler.every((urun) => {
+            return urun.etiket.trim() !== '';
+        });
+        if(hepsindeEtiketVarMi) {
+            etiketKontrol.innerText = "Tüm ürünlerde etiket var.";
+        } else {
+            etiketKontrol.innerText = "Etiketi boş olan ürünler var.";
+        }
+
+        if(arananKelime !== '') {
+            if(ilkBulunanUrun) {
+                bulunanUrun.innerText = `İlk bulunan ürün: ${ilkBulunanUrun.ad}`;
+            } else {
+                bulunanUrun.innerText = `Ürün bulunamadı.`;
+            }
+        } else {
+            bulunanUrun.innerText = '';
+        }
+
+
+        }
+    
+        btnEkle.addEventListener('click', () => {
+            const yeniUrun = {
+                ad: urunAdi.value.trim(),
+                fiyat: parseFloat(urunFiyat.value),
+                etiket : urunEtiket.value.trim()
+            };
+            urunler.push(yeniUrun);
+            console.log(urunler);
+            urunleriGoster();
+        });
+
+       
+       
+
+        aramaKutusu.addEventListener('input', () => {
+            urunleriGoster();
+        } );
+
+        let saniye = 0;
+        let timerId = null;
+        btnBaslat.addEventListener('click', () => {
+            if(timerId) return;
+            timerId = setInterval(() => {
+                saniye++;
+                sureGostergesi.innerText = `Süre: ${saniye} saniye`;
+            }, 1000);
+        });
+
+        btnDurdur.addEventListener('click', () => {
+            clearInterval(timerId);
+            timerId = null;
+        });
+
+    </script>
+    
+</body>
+</html>
