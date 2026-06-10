@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <title>E-Ticaret Sepet Yönetimi</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="p-6 bg-gray-200">
+    <div class="p-6 bg-white">
+        <h1 class="text-xl font-bold">E-Ticaret Sepet Yönetimi</h1>
+        <div class="p-4 border">
+            <h2 class="text-lg font-bold">Ürün Katalog</h2>
+            <div class="mb-2">
+                <input type="text" id="search-input" placeholder="Ürün Adı" class="p-2 border">
+            </div>
+            <button id="btn-search" class="p-2 bg-blue-200">Katalog Güncelle</button>
+            <div class="mt-4 space-y-2" id="product-list">
+                <p class="text-gray-500">Ürün listesini yüklemek için butona tıklayın.</p>
+            </div>
+        </div>
+        <div class="mt-2"></div>
+        <div class="p-4 border">
+            <h2 class="text-lg font-bold">Alışveriş Sepetim</h2>
+            <ul class="list-disc pl-5 space-y-1 " id="cart-list">
+                <li>Sepetiniz Boş</li>
+            </ul>
+            <div class="mt-2 font-bold">
+               Toplam tutar: <span id="cart-total">0</span>TL 
+            </div>
+            <button id="btn-checkout" class="p-2 bg-green-200 mt-2">
+                Alışverişi Tamamla
+            </button>
+        </div>
+        <div id="status" class="p-2 border">Sistem Hazır</div>
+    </div>
+
+    <script>
+        const yedekUrunler =[
+            {"id": 1, "title": 'akıllı telefon', 'kategori': 'Elektronik', 'fiyat': '15000', 'stok':5},
+             {"id": 2, "title": 'etek', 'kategori': 'kıyafet', 'fiyat': '1500', 'stok':4},
+              {"id": 3, "title": 'hamburger', 'kategori': 'yemek', 'fiyat': '400', 'stok':40},
+               {"id": 4, "title": 'kulaklık', 'kategori': 'Elektronik', 'fiyat': '2500', 'stok':5},
+                {"id": 5, "title": 'elbise', 'kategori': 'kıyafet', 'fiyat': '3500', 'stok':10},
+                 {"id": 6, "title": 'akıllı saat', 'kategori': 'Elektronik', 'fiyat': '300', 'stok':5},
+                  {"id": 7, "title": 'tencere', 'kategori': 'mutfak eşyası', 'fiyat': '2000', 'stok':12},
+                   {"id": 8, "title": 'halı', 'kategori': 'Ev Eşyası', 'fiyat': '30000', 'stok':30},
+                    {"id": 9, "title": 'sandalet', 'kategori': 'ayakkabı', 'fiyat': '1800', 'stok':25},
+                     {"id": 10, "title": 'bilezik', 'kategori': 'takı', 'fiyat': '200000', 'stok':5},
+
+        ]
+         let sepet =[];
+         const urunleriSorgula = async() => {
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            const listDiv = document.getElementById('product-list');
+            const status = document.getElementById('status');
+
+            status.innerText = "Ürünler Listeleniyor...";
+            status.className = 'p-2 border';
+
+            let urunler=[];
+
+            try{
+                const response = await axios.get('https://kodusta.com/api/urunler.json');
+                urunler = response.data;
+            } catch(hata) {
+                console.warn('Cors hatası veya bağlantı hatası');
+                urunler = yedekUrunler;
+            }
+
+            const filtrelenmis = urunler.filter(u => title.toLowerCase().includes(searchVal));
+            listDiv.innerHTML = "";
+            if(filtrelenmis.length ===0){
+                listDiv.innerHTML='<p class="p-2 text-red-500">Ürün bulunamadı</p>';
+                    return;
+            }
+            filtrelenmis.forEach(urun => {
+                const itemDiv =document.getElementById('div');
+                itemDiv.className= "p-2 border";
+                itemDiv.innerHTML=`<strong>${urun.title}</strong> - Kategori: ${urun.kategori}<br>
+                Fiyat:${urun.fiyat}TL | Stok: ${urun.stok > 0 ? urun.stok: 'Tükenmis'}<br>
+                <button class="p-1 bg-yellow-200 text-xs" onclick="sepeteEkleTiklandi(${urun.id})">Sepete Ekle</button>`;
+
+                listDiv.appendChild(itemDiv);
+            })
+
+         }
+    </script>
+
+
+    
+</body>
+</html>
