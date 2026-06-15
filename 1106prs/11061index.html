@@ -51,6 +51,7 @@
 
         ]
          let sepet =[];
+         let gosterilenUrunler = [];
          const urunleriSorgula = async() => {
             const searchVal = document.getElementById('search-input').value.toLowerCase();
             const listDiv = document.getElementById('product-list');
@@ -70,6 +71,7 @@
             }
 
             const filtrelenmis = urunler.filter(u => u.title.toLowerCase().includes(searchVal));
+            gosterilenUrunler = filtrelenmis;
             listDiv.innerHTML = "";
             if(filtrelenmis.length ===0){
                 listDiv.innerHTML='<p class="p-2 text-red-500">Ürün bulunamadı</p>';
@@ -115,7 +117,7 @@
             status.innerText="Stok sorgulanıyor...";
             status.className= "p-2 border";
 
-            const urun = yedekUrunler.find(u => u.id === urunId);
+            const urun = gosterilenUrunler.find(u => u.id === urunId);
             try{
                 const stokMesaji= await stokKontrolEt(urun);
                 sepet.push(urun);
