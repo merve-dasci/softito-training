@@ -4,7 +4,9 @@ export default function Header({searchInput,
     handleSearchSubmit, 
     setSelectedCategory, 
     setSearchQuery, 
-    setView}) {
+    setView,
+cartItems,
+setIsCartOpen}) {
     const handleLogoClick=()=>{
         setView('home')
         setSelectedCategory('Tümü')
@@ -32,9 +34,11 @@ export default function Header({searchInput,
                      <div className="action-item">
                         <span>Giriş Yap</span>
                     </div>
-                     <div className="action-item">
+                     <div className="action-item" onClick={() => setIsCartOpen(true)}>
                         <span>Sepetim</span>
-                        <span className="badge">0</span>
+                        <span className="badge">
+                            {cartItems.reduce((total, item) => total + item.quantity, 0)}
+                        </span>
                     </div>
                 </div>
             </div>

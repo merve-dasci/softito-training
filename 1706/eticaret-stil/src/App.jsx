@@ -6,12 +6,15 @@ import Footer from "./components/Footer";
 import AddProductForm from "./components/AddProductForm";
 import { MOCK_PRODUCTS, MOCK_CATEGORIES } from "./productsMock";
 import { useState } from "react";
+import CartDrawer from "./components/CartDrawer";
 function App() {
   const [products, setProducts] = useState(MOCK_PRODUCTS);
   const [selectedCategory, setSelectedCategory] = useState("Tümü");
   const [view, setView] = useState("home");
   const [searchQuery,setSearchQuery]=useState("");
   const [searchInput,setSearchInput]=useState("");
+  const [cartItems, setCartItems] = useState([])
+  const [isCartOpen, setIsCartOpen] =useState(false)
 
   const handleAddProduct = (data) => {
     const newProduct = {
@@ -28,7 +31,47 @@ function App() {
 
   }
 
-const filteredProducts=products.filter((p)=>{
+  const handleAddToCart = (product) =>{
+    const existingProduct = cartItems.find((item => item.id === product.id));
+
+    if(existingProduct){
+      const updatedCart = cartItems.map((item) => item.id === product.id ? {...item, quantity: item.quantity+1}
+    : item
+    );
+    setCartItems(updatedCart)
+    } else {
+      const newCartItem = {
+        ...product, quantity :1
+      };
+      setCartItems([...cartItems, newCartItem])
+    }
+  }
+
+  const increaseCartItem = (productId) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item,
+    );
+
+    setCartItems(updatedCart);
+  };
+
+  const decreaseCartItem = (productId) => {
+    const updatedCart = cartItems
+      .map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity - 1 } : item,
+      )
+      .filter((item) => item.quantity > 0);
+
+    setCartItems(updatedCart);
+  };
+
+  const removeCartItem = (productId) => {
+    const updatedCart = cartItems.filter((item) => item.id !== productId);
+
+    setCartItems(updatedCart);
+  };
+
+  const filteredProducts=products.filter((p)=>{
   const matchesCategory=selectedCategory==='Tümü' || p.category ===selectedCategory
   const matchesSearch=p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.description.toLowerCase().includes(searchQuery.toLowerCase())
   return matchesCategory && matchesSearch
@@ -39,6 +82,11 @@ const handleSearchSubmit=(e)=>{
   setSearchQuery(searchInput);
 }
 
+const totalPrice = cartItems.reduce(
+  (total, item) => total + item.price * item.quantity,
+  0,
+);
+
 
   return (
     <>
@@ -48,6 +96,8 @@ const handleSearchSubmit=(e)=>{
       setSearchQuery={setSearchQuery}
       setSelectedCategory={setSelectedCategory}
       setView={setView}
+      cartItems={cartItems}
+      setIsCartOpen={setIsCartOpen}
       />
       <Navbar
         categories={MOCK_CATEGORIES}
@@ -78,7 +128,7 @@ const handleSearchSubmit=(e)=>{
           </div>
 ) : (
 
-            <ProductGrid products={filteredProducts}/>
+            <ProductGrid products={filteredProducts} onAddToCart={handleAddToCart}/>
             )}
           </div>
         </main>
@@ -88,6 +138,7 @@ const handleSearchSubmit=(e)=>{
         onAddProduct={handleAddProduct}
         />
       )}
+      <CartDrawer isCartOpen={isCartOpen} onClose={() => setIsCartOpen(false)} cartItems={cartItems} increaseCartItem={increaseCartItem} decreaseCartItem={decreaseCartItem} removeCartItem={removeCartItem} totalPrice={totalPrice}/>
       <Footer />
     </>
   );
