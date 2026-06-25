@@ -45,7 +45,7 @@ const initialState = {
 const customerSlice = createSlice({
   name: "customer",
   initialState,
-  reducers: (state, action) => {
+  reducers: {
     addCustomer: (state, action) => {
       const nextId =
         state.list.length > 0
@@ -56,26 +56,25 @@ const customerSlice = createSlice({
         balance: 0,
         ...action.payload,
       });
-    };
+    },
     editCustomer: (state, action) => {
       const index = state.list.findIndex((c) => c.id === action.payload.id);
       if (index !== -1) {
         state.list[index] = { ...state.list[index], ...action.payload };
       }
       state.selecterCustomer = null;
-    };
+    },
     deleteCustomer: (state, action) => {
       state.list = state.list.filter((c) => c.id !== action.payload);
-    };
+    },
     selectCustomerForEdit: (state, action) => {
       state.selecterCustomer = action.payload;
-    };
+    },
     clearSelectedCustomer: (state) => {
       state.selecterCustomer = null;
-    };
+    },
   },
 });
-
 export const {
   addCustomer,
   editCustomer,
