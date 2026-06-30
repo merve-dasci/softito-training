@@ -1,0 +1,723 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ahmet",
+      "surname": "Yılmaz",
+      "email": "demo@example.com",
+      "password": "password123",
+      "phone": "5551234567"
+    },
+    {
+      "name": "Merve ",
+      "surname": "Daşçi",
+      "phone": "5374417426",
+      "email": "merve@example.com",
+      "password": "123456",
+      "id": "Sn8o1Ujv46w"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "t1",
+      "type": "bus",
+      "company": "Kamil Koç",
+      "departure": "İstanbul",
+      "arrival": "Ankara",
+      "date": "2026-06-30",
+      "time": "08:00",
+      "price": 600,
+      "duration": "6h 30m",
+      "seats": [
+        {
+          "id": 1,
+          "number": 1,
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": 2,
+          "status": "occupied"
+        },
+        {
+          "id": 3,
+          "number": 3,
+          "status": "available"
+        },
+        {
+          "id": 4,
+          "number": 4,
+          "status": "occupied"
+        },
+        {
+          "id": 5,
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "id": 6,
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "id": 7,
+          "number": 7,
+          "status": "available"
+        },
+        {
+          "id": 8,
+          "number": 8,
+          "status": "occupied"
+        },
+        {
+          "id": 9,
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "id": 10,
+          "number": 10,
+          "status": "available"
+        },
+        {
+          "id": 11,
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "id": 12,
+          "number": 12,
+          "status": "available"
+        },
+        {
+          "id": 13,
+          "number": 13,
+          "status": "available"
+        },
+        {
+          "id": 14,
+          "number": 14,
+          "status": "available"
+        },
+        {
+          "id": 15,
+          "number": 15,
+          "status": "occupied"
+        },
+        {
+          "id": 16,
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "id": 17,
+          "number": 17,
+          "status": "available"
+        },
+        {
+          "id": 18,
+          "number": 18,
+          "status": "available"
+        },
+        {
+          "id": 19,
+          "number": 19,
+          "status": "available"
+        },
+        {
+          "id": 20,
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "id": 21,
+          "number": 21,
+          "status": "available"
+        },
+        {
+          "id": 22,
+          "number": 22,
+          "status": "available"
+        },
+        {
+          "id": 23,
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "id": 24,
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "id": 25,
+          "number": 25,
+          "status": "available"
+        },
+        {
+          "id": 26,
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "id": 27,
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "id": 28,
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "id": 29,
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "id": 30,
+          "number": 30,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "type": "bus",
+      "company": "Metro Turizm",
+      "departure": "İstanbul",
+      "arrival": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "price": 550,
+      "duration": "6h 45m",
+      "seats": [
+        {
+          "id": 1,
+          "number": 1,
+          "status": "occupied"
+        },
+        {
+          "id": 2,
+          "number": 2,
+          "status": "available"
+        },
+        {
+          "id": 3,
+          "number": 3,
+          "status": "occupied"
+        },
+        {
+          "id": 4,
+          "number": 4,
+          "status": "occupied"
+        },
+        {
+          "id": 5,
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "id": 6,
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "id": 7,
+          "number": 7,
+          "status": "occupied"
+        },
+        {
+          "id": 8,
+          "number": 8,
+          "status": "occupied"
+        },
+        {
+          "id": 9,
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "id": 10,
+          "number": 10,
+          "status": "available"
+        },
+        {
+          "id": 11,
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "id": 12,
+          "number": 12,
+          "status": "available"
+        },
+        {
+          "id": 13,
+          "number": 13,
+          "status": "available"
+        },
+        {
+          "id": 14,
+          "number": 14,
+          "status": "available"
+        },
+        {
+          "id": 15,
+          "number": 15,
+          "status": "available"
+        },
+        {
+          "id": 16,
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "id": 17,
+          "number": 17,
+          "status": "available"
+        },
+        {
+          "id": 18,
+          "number": 18,
+          "status": "available"
+        },
+        {
+          "id": 19,
+          "number": 19,
+          "status": "available"
+        },
+        {
+          "id": 20,
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "id": 21,
+          "number": 21,
+          "status": "available"
+        },
+        {
+          "id": 22,
+          "number": 22,
+          "status": "available"
+        },
+        {
+          "id": 23,
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "id": 24,
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "id": 25,
+          "number": 25,
+          "status": "available"
+        },
+        {
+          "id": 26,
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "id": 27,
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "id": 28,
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "id": 29,
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "id": 30,
+          "number": 30,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "type": "flight",
+      "company": "Pegasus",
+      "departure": "İstanbul",
+      "arrival": "Ankara",
+      "date": "2026-06-30",
+      "time": "10:15",
+      "price": 1200,
+      "duration": "1h 10m",
+      "seats": [
+        {
+          "id": 1,
+          "number": "1A",
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": "1B",
+          "status": "occupied"
+        },
+        {
+          "id": 3,
+          "number": "1C",
+          "status": "available"
+        },
+        {
+          "id": 4,
+          "number": "1D",
+          "status": "available"
+        },
+        {
+          "id": 5,
+          "number": "1E",
+          "status": "available"
+        },
+        {
+          "id": 6,
+          "number": "1F",
+          "status": "available"
+        },
+        {
+          "id": 7,
+          "number": "2A",
+          "status": "available"
+        },
+        {
+          "id": 8,
+          "number": "2B",
+          "status": "occupied"
+        },
+        {
+          "id": 9,
+          "number": "2C",
+          "status": "available"
+        },
+        {
+          "id": 10,
+          "number": "2D",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "type": "flight",
+      "company": "Türk Hava Yolları",
+      "departure": "İstanbul",
+      "arrival": "Ankara",
+      "date": "2026-06-30",
+      "time": "15:45",
+      "price": 1800,
+      "duration": "1h 15m",
+      "seats": [
+        {
+          "id": 1,
+          "number": "1A",
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": "1B",
+          "status": "occupied"
+        },
+        {
+          "id": 3,
+          "number": "1C",
+          "status": "available"
+        },
+        {
+          "id": 4,
+          "number": "1D",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "type": "bus",
+      "company": "Kamil Koç",
+      "departure": "Ankara",
+      "arrival": "İstanbul",
+      "date": "2026-07-01",
+      "time": "09:00",
+      "price": 600,
+      "duration": "6h 30m",
+      "seats": [
+        {
+          "id": 1,
+          "number": 1,
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": 2,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "type": "flight",
+      "company": "Pegasus",
+      "departure": "Ankara",
+      "arrival": "İstanbul",
+      "date": "2026-07-01",
+      "time": "11:30",
+      "price": 1250,
+      "duration": "1h 10m",
+      "seats": [
+        {
+          "id": 1,
+          "number": "1A",
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": "1B",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "type": "bus",
+      "company": "Pamukkale Turizm",
+      "departure": "İstanbul",
+      "arrival": "İzmir",
+      "date": "2026-07-02",
+      "time": "23:00",
+      "price": 750,
+      "duration": "7h 15m",
+      "seats": [
+        {
+          "id": 1,
+          "number": 1,
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": 2,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "type": "flight",
+      "company": "SunExpress",
+      "departure": "İstanbul",
+      "arrival": "İzmir",
+      "date": "2026-07-02",
+      "time": "07:20",
+      "price": 1150,
+      "duration": "1h 05m",
+      "seats": [
+        {
+          "id": 1,
+          "number": "1A",
+          "status": "available"
+        },
+        {
+          "id": 2,
+          "number": "1B",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "sf3oqqT7f00",
+      "company": "SunExpress",
+      "type": "flight",
+      "departure": "Istanbul",
+      "arrival": "Izmir",
+      "date": "2026-07-05",
+      "time": "14:30",
+      "price": 1350,
+      "duration": "1h 15m",
+      "seats": [
+        {
+          "id": 1,
+          "number": "1A",
+          "status": "occupied"
+        },
+        {
+          "id": 2,
+          "number": "1B",
+          "status": "occupied"
+        },
+        {
+          "id": 3,
+          "number": "1C",
+          "status": "available"
+        },
+        {
+          "id": 4,
+          "number": "1D",
+          "status": "available"
+        },
+        {
+          "id": 5,
+          "number": "2A",
+          "status": "available"
+        },
+        {
+          "id": 6,
+          "number": "2B",
+          "status": "available"
+        },
+        {
+          "id": 7,
+          "number": "2C",
+          "status": "available"
+        },
+        {
+          "id": 8,
+          "number": "2D",
+          "status": "available"
+        },
+        {
+          "id": 9,
+          "number": "3A",
+          "status": "available"
+        },
+        {
+          "id": 10,
+          "number": "3B",
+          "status": "available"
+        },
+        {
+          "id": 11,
+          "number": "3C",
+          "status": "available"
+        },
+        {
+          "id": 12,
+          "number": "3D",
+          "status": "available"
+        },
+        {
+          "id": 13,
+          "number": "4A",
+          "status": "available"
+        },
+        {
+          "id": 14,
+          "number": "4B",
+          "status": "available"
+        },
+        {
+          "id": 15,
+          "number": "4C",
+          "status": "available"
+        },
+        {
+          "id": 16,
+          "number": "4D",
+          "status": "available"
+        },
+        {
+          "id": 17,
+          "number": "5A",
+          "status": "available"
+        },
+        {
+          "id": 18,
+          "number": "5B",
+          "status": "available"
+        },
+        {
+          "id": 19,
+          "number": "5C",
+          "status": "available"
+        },
+        {
+          "id": 20,
+          "number": "5D",
+          "status": "available"
+        },
+        {
+          "id": 21,
+          "number": "6A",
+          "status": "available"
+        },
+        {
+          "id": 22,
+          "number": "6B",
+          "status": "available"
+        },
+        {
+          "id": 23,
+          "number": "6C",
+          "status": "available"
+        },
+        {
+          "id": 24,
+          "number": "6D",
+          "status": "available"
+        }
+      ]
+    }
+  ],
+  "bookings": [
+    {
+      "userId": "guest",
+      "userName": "John Doe",
+      "ticketId": "t2",
+      "company": "Metro Turizm",
+      "type": "bus",
+      "departure": "İstanbul",
+      "arrival": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "seatsBooked": [
+        1
+      ],
+      "pricePaid": 550,
+      "createdAt": "2026-06-30T08:32:33.404Z",
+      "id": "kphmtTYnYbc"
+    },
+    {
+      "userId": "Sn8o1Ujv46w",
+      "userName": "Jane Doe",
+      "ticketId": "sf3oqqT7f00",
+      "company": "SunExpress",
+      "type": "flight",
+      "departure": "Istanbul",
+      "arrival": "Izmir",
+      "date": "2026-07-05",
+      "time": "14:30",
+      "seatsBooked": [
+        "1B"
+      ],
+      "pricePaid": 1350,
+      "createdAt": "2026-06-30T11:02:55.887Z",
+      "id": "5uxOKw2Gbdk"
+    },
+    {
+      "userId": "Sn8o1Ujv46w",
+      "userName": "Merve  Daşçi",
+      "ticketId": "sf3oqqT7f00",
+      "company": "SunExpress",
+      "type": "flight",
+      "departure": "Istanbul",
+      "arrival": "Izmir",
+      "date": "2026-07-05",
+      "time": "14:30",
+      "seatsBooked": [
+        "1A"
+      ],
+      "pricePaid": 1350,
+      "createdAt": "2026-06-30T11:20:16.646Z",
+      "id": "vwBgkR7xKTs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
