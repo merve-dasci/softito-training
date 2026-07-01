@@ -1,0 +1,742 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Roses"
+    },
+    {
+      "id": 2,
+      "name": "Tulips"
+    },
+    {
+      "id": 3,
+      "name": "Orchids"
+    },
+    {
+      "id": 4,
+      "name": "Lilies"
+    },
+    {
+      "id": 5,
+      "name": "Birthday Flowers"
+    },
+    {
+      "id": 6,
+      "name": "Anniversary Flowers"
+    },
+    {
+      "id": 7,
+      "name": "Wedding Collection"
+    },
+    {
+      "id": 8,
+      "name": "Indoor Plants"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Red Rose Bouquet",
+      "category": "Roses",
+      "price": 850,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&q=80&w=600",
+      "description": "An elegant collection of premium red roses, perfectly arranged with fresh eucalyptus leaves to express your deepest romantic feelings.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 2,
+      "name": "White Orchid Cascade",
+      "category": "Orchids",
+      "price": 1200,
+      "stock": 5,
+      "image": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&q=80&w=600",
+      "description": "Stunning double-stemmed white phalaenopsis orchid in a premium ceramic pot. A luxurious and long-lasting gift for any special occasion.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 3,
+      "name": "Pastel Tulip Symphony",
+      "category": "Tulips",
+      "price": 620,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&q=80&w=600",
+      "description": "A cheerful bouquet of fresh tulips in soft pastel shades of pink, yellow, and white, bringing the joy of spring indoors.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 4,
+      "name": "Crimson Velvet Roses",
+      "category": "Roses",
+      "price": 950,
+      "stock": 17,
+      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600",
+      "description": "A classic arrangement of deep velvet crimson roses, hand-tied in custom matching wraps.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 5,
+      "name": "Blushing Coral Roses",
+      "category": "Roses",
+      "price": 870,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=600",
+      "description": "Delicate coral-colored rose buds gathered in a soft romantic dome layout.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 6,
+      "name": "Sunset Amber Rose Box",
+      "category": "Roses",
+      "price": 1100,
+      "stock": 23,
+      "image": "https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&q=80&w=600",
+      "description": "Rich orange amber roses presented in a deluxe luxury black linen box.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 7,
+      "name": "Graceful Ivory Roses",
+      "category": "Roses",
+      "price": 920,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=600",
+      "description": "Snow white luxury roses assembled with premium green leaves and white silk ribbon.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 8,
+      "name": "Lavender Whisper Roses",
+      "category": "Roses",
+      "price": 880,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?auto=format&fit=crop&q=80&w=600",
+      "description": "Rare lavender-shaded roses offering a peaceful romantic sigh of pure elegance.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 9,
+      "name": "Gold Foil Rose Harmony",
+      "category": "Roses",
+      "price": 1400,
+      "stock": 7,
+      "image": "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=600",
+      "description": "Golden yellow premium roses matched with white eustoma and luxury gold accents.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 10,
+      "name": "Sweetheart Pink Rose Dome",
+      "category": "Roses",
+      "price": 890,
+      "stock": 10,
+      "image": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=600",
+      "description": "Classic sweet pink baby roses bunched tightly inside an elegant round ceramic bowl.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 11,
+      "name": "Sunny Yellow Tulip Bunch",
+      "category": "Tulips",
+      "price": 590,
+      "stock": 13,
+      "image": "https://images.unsplash.com/photo-1496062031456-07b8f1620322?auto=format&fit=crop&q=80&w=600",
+      "description": "Bright yellow tulips straight from the grower, bringing warmth and sunshine to any room.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 12,
+      "name": "Scarlet Emperor Tulips",
+      "category": "Tulips",
+      "price": 640,
+      "stock": 16,
+      "image": "https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&q=80&w=600",
+      "description": "Fiery red tulip stems grouped in a modern matte wrap, representing deep passion.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 13,
+      "name": "Purple Velvet Tulips",
+      "category": "Tulips",
+      "price": 680,
+      "stock": 19,
+      "image": "https://images.unsplash.com/photo-1612457814234-a02ff6732cf0?auto=format&fit=crop&q=80&w=600",
+      "description": "Deep royal purple tulips offering an exquisite color profile for a dramatic statement.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 14,
+      "name": "Peach Sorbet Tulips",
+      "category": "Tulips",
+      "price": 630,
+      "stock": 22,
+      "image": "https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&q=80&w=600",
+      "description": "Soft peach-colored tulip stems, representing friendly gratitude and soft warmth.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 15,
+      "name": "White Swan Tulip Cascade",
+      "category": "Tulips",
+      "price": 720,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1525097487452-641135696957?auto=format&fit=crop&q=80&w=600",
+      "description": "Crisp white fringed tulips representing fresh starts and pure thoughts.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 16,
+      "name": "Sunset Blend Tulip Mix",
+      "category": "Tulips",
+      "price": 690,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=600",
+      "description": "A warm mix of orange, yellow, and red tulips celebrating seasonal changes.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 17,
+      "name": "Roseate Double Tulips",
+      "category": "Tulips",
+      "price": 750,
+      "stock": 6,
+      "image": "https://images.unsplash.com/photo-1604085572504-a392e81d59a2?auto=format&fit=crop&q=80&w=600",
+      "description": "Rare double-layered pink tulips resembling mini peonies, hand-styled by our florists.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 18,
+      "name": "Magenta Queen Orchid",
+      "category": "Orchids",
+      "price": 1350,
+      "stock": 9,
+      "image": "https://images.unsplash.com/photo-1461938337379-4b537c6c455a?auto=format&fit=crop&q=80&w=600",
+      "description": "A tall, majestic magenta phalaenopsis orchid in an elegant geometric marble pot.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 19,
+      "name": "Sunlit Yellow Mini Orchid",
+      "category": "Orchids",
+      "price": 950,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1597839219216-a773cb2473e4?auto=format&fit=crop&q=80&w=600",
+      "description": "A cute dwarf orchid in bright canary yellow, perfect for desk and window styling.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 20,
+      "name": "Emerald Forest Orchid",
+      "category": "Orchids",
+      "price": 1450,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&q=80&w=600",
+      "description": "A luxurious green cymbidium orchid with matching forest moss inside a concrete pot.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 21,
+      "name": "Sapphire Dream Orchid",
+      "category": "Orchids",
+      "price": 1600,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1619860860774-1e2e17343412?auto=format&fit=crop&q=80&w=600",
+      "description": "An exotic blue dyed orchid representing mystique and rare boutique fashion.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 22,
+      "name": "Golden Orchid Splendor",
+      "category": "Orchids",
+      "price": 1250,
+      "stock": 21,
+      "image": "https://images.unsplash.com/photo-1569422896590-bdf956ec94bb?auto=format&fit=crop&q=80&w=600",
+      "description": "Golden-hued multi-blossom orchid plant in a premium gold brushed planter.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 23,
+      "name": "Pink Angel Orchid Stems",
+      "category": "Orchids",
+      "price": 1150,
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1572913017637-29b20b22a013?auto=format&fit=crop&q=80&w=600",
+      "description": "Gentle light pink orchid stems styled with natural bamboo sticks in a clay vase.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 24,
+      "name": "Snowflake Micro Orchid",
+      "category": "Orchids",
+      "price": 890,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1626082929543-5bab0f090c42?auto=format&fit=crop&q=80&w=600",
+      "description": "A delicate white miniature orchid in a soft pink ceramic cup, sweet and refined.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 25,
+      "name": "Stargazer Pink Lily Bowl",
+      "category": "Lilies",
+      "price": 850,
+      "stock": 5,
+      "image": "https://images.unsplash.com/photo-1587334206574-35113a49de44?auto=format&fit=crop&q=80&w=600",
+      "description": "Stunning pink stargazer lilies with dramatic spots, emitting a sweet fragrance.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 26,
+      "name": "White Casablanca Lilies",
+      "category": "Lilies",
+      "price": 920,
+      "stock": 8,
+      "image": "https://images.unsplash.com/photo-1558350315-8aa00e8e4590?auto=format&fit=crop&q=80&w=600",
+      "description": "Large, pure white oriental lilies with dark green leaves in a clear tall vase.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 27,
+      "name": "Tiger Lily Sunrise",
+      "category": "Lilies",
+      "price": 780,
+      "stock": 11,
+      "image": "https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&q=80&w=600",
+      "description": "Bright orange tiger lilies bringing a vibrant, wild energy to your home.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 28,
+      "name": "Golden Daylily Charm",
+      "category": "Lilies",
+      "price": 720,
+      "stock": 14,
+      "image": "https://images.unsplash.com/photo-1502741334134-13fa58b66970?auto=format&fit=crop&q=80&w=600",
+      "description": "Soft yellow daylilies mixed with fresh eucalyptus and white baby breath.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 29,
+      "name": "Scarlet Asiatic Lily Dome",
+      "category": "Lilies",
+      "price": 890,
+      "stock": 17,
+      "image": "https://images.unsplash.com/photo-1533038590840-1cde6b66b726?auto=format&fit=crop&q=80&w=600",
+      "description": "Vibrant red Asiatic lilies bunched tightly in an elegant white ceramic bowl.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 30,
+      "name": "Calla Lily Grace",
+      "category": "Lilies",
+      "price": 1100,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=600",
+      "description": "Sleek, elegant white calla lilies representing pure sophistication and modern lines.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 31,
+      "name": "Pastel Lily & Rose Mix",
+      "category": "Lilies",
+      "price": 950,
+      "stock": 23,
+      "image": "https://images.unsplash.com/photo-1572587358785-5df04040a4cc?auto=format&fit=crop&q=80&w=600",
+      "description": "A soft mix of pink Asiatic lilies and cream roses wrapped in rustic paper.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 32,
+      "name": "Royal Gold Calla Lilies",
+      "category": "Lilies",
+      "price": 1250,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1620801589273-58af252b47e2?auto=format&fit=crop&q=80&w=600",
+      "description": "Magnificent yellow calla lilies arranged elegantly for a royal presentation.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 33,
+      "name": "Confetti Celebration Mix",
+      "category": "Birthday Flowers",
+      "price": 750,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&q=80&w=600",
+      "description": "A joyful, colorful mix of gerberas, carnations, and daisies perfect for birthday surprises.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 34,
+      "name": "Sweet Peony Birthday Dream",
+      "category": "Birthday Flowers",
+      "price": 1200,
+      "stock": 7,
+      "image": "https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&q=80&w=600",
+      "description": "Luxury fresh pink peonies styled with white baby breath in custom pink wrapping.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 35,
+      "name": "Sunflower Fields Box",
+      "category": "Birthday Flowers",
+      "price": 820,
+      "stock": 10,
+      "image": "https://images.unsplash.com/photo-1606041011872-59659777a9f9?auto=format&fit=crop&q=80&w=600",
+      "description": "A bright, sunny box of fresh sunflowers and green chrysanthemums to spread birthday joy.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 36,
+      "name": "Birthday Balloon Bouquet",
+      "category": "Birthday Flowers",
+      "price": 950,
+      "stock": 13,
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=600",
+      "description": "A large colorful bouquet of roses and lilies, complete with a celebratory card.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 37,
+      "name": "Lavender Sweetness Box",
+      "category": "Birthday Flowers",
+      "price": 880,
+      "stock": 16,
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&q=80&w=600",
+      "description": "A round gift box containing lavender carnations, pink roses, and dried lavender stalks.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 38,
+      "name": "Carnival Floral Explosion",
+      "category": "Birthday Flowers",
+      "price": 1100,
+      "stock": 19,
+      "image": "https://images.unsplash.com/photo-1552528140-5e828cfc6560?auto=format&fit=crop&q=80&w=600",
+      "description": "An opulent, colorful basket filled with premium seasonal flowers and green foliage.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 39,
+      "name": "Soft Pastel Birthday Hug",
+      "category": "Birthday Flowers",
+      "price": 650,
+      "stock": 22,
+      "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=600",
+      "description": "Cream roses, pink gerberas, and chamomile flowers wrapped in soft dusty pink paper.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 40,
+      "name": "Golden Year Rose Basket",
+      "category": "Birthday Flowers",
+      "price": 1400,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1567306301-43027350c430?auto=format&fit=crop&q=80&w=600",
+      "description": "A luxury basket of 24 gold and yellow roses celebrating milestone birthdays.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 41,
+      "name": "Silver Jubilee Rose Vase",
+      "category": "Anniversary Flowers",
+      "price": 1600,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1508780709619-79562169bc24?auto=format&fit=crop&q=80&w=600",
+      "description": "A luxury silver vase containing 25 pure white roses and silver leaf details.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 42,
+      "name": "Ruby Romance Rose Box",
+      "category": "Anniversary Flowers",
+      "price": 1800,
+      "stock": 6,
+      "image": "https://images.unsplash.com/photo-1520808663317-647b476a81b9?auto=format&fit=crop&q=80&w=600",
+      "description": "Our signature luxury box loaded with 36 velvet red roses, representing everlasting love.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 43,
+      "name": "Golden Hour Rose Bowl",
+      "category": "Anniversary Flowers",
+      "price": 1450,
+      "stock": 9,
+      "image": "https://images.unsplash.com/photo-1460533893735-45ccd25fc944?auto=format&fit=crop&q=80&w=600",
+      "description": "Warm peach and golden yellow roses arranged in a premium bronze ceramic bowl.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 44,
+      "name": "Eternal Pink Carnation Dome",
+      "category": "Anniversary Flowers",
+      "price": 980,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1522814881858-a579bf6803bd?auto=format&fit=crop&q=80&w=600",
+      "description": "A dense dome of premium pink carnations and cream spray roses, symbolizing timeless bonds.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 45,
+      "name": "Classic Romance Hydrangea",
+      "category": "Anniversary Flowers",
+      "price": 1200,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1531875456634-3f541a2b4d4e?auto=format&fit=crop&q=80&w=600",
+      "description": "Huge pink and blue hydrangeas paired with white roses in an elegant glass vase.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 46,
+      "name": "Bespoke Peony & Rose Globe",
+      "category": "Anniversary Flowers",
+      "price": 1950,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&q=80&w=600",
+      "description": "An exquisite round arrangement of premium peonies, roses, and rununculus flowers.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 47,
+      "name": "Blossoming Love Orchid Pot",
+      "category": "Anniversary Flowers",
+      "price": 1350,
+      "stock": 21,
+      "image": "https://images.unsplash.com/photo-1617957602123-3509210c2c58?auto=format&fit=crop&q=80&w=600",
+      "description": "A double-stemmed pink orchid plant paired with miniature roses at the base.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 48,
+      "name": "Vintage Romance Dried Bunch",
+      "category": "Anniversary Flowers",
+      "price": 850,
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&q=80&w=600",
+      "description": "A beautifully arranged bouquet of dried pink roses, lavender, and pampas grass.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 49,
+      "name": "Bridal White Cascade",
+      "category": "Wedding Collection",
+      "price": 2100,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1550950158-d0d960dff51b?auto=format&fit=crop&q=80&w=600",
+      "description": "A luxurious, cascading bridal bouquet of white roses, white orchids, and ivy leaves.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 50,
+      "name": "Blushing Bridesmaid Bunch",
+      "category": "Wedding Collection",
+      "price": 1200,
+      "stock": 5,
+      "image": "https://images.unsplash.com/photo-1501004318641-724e6114f2e3?auto=format&fit=crop&q=80&w=600",
+      "description": "A smaller, sweet bouquet of light pink spray roses and baby breath with satin ribbons.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 51,
+      "name": "Altar Floral Splendor",
+      "category": "Wedding Collection",
+      "price": 2500,
+      "stock": 8,
+      "image": "https://images.unsplash.com/photo-1512428813833-df70f77a33a7?auto=format&fit=crop&q=80&w=600",
+      "description": "A grand, tall pedestal arrangement of white delphiniums, lilies, and hydrangeas.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 52,
+      "name": "Rustic Wedding Table Runner",
+      "category": "Wedding Collection",
+      "price": 1800,
+      "stock": 11,
+      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600",
+      "description": "A low, long table arrangement of eucalyptus, white roses, and white carnations.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 53,
+      "name": "Boho Dream Wedding Arch",
+      "category": "Wedding Collection",
+      "price": 2400,
+      "stock": 14,
+      "image": "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&q=80&w=600",
+      "description": "A premium cascading spray of dried palms, pampas grass, and white orchids.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 54,
+      "name": "Golden Wedding Arch Spray",
+      "category": "Wedding Collection",
+      "price": 2200,
+      "stock": 17,
+      "image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=600",
+      "description": "A warm, rich arrangement of peach roses, pampas grass, and gold painted eucalyptus.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 55,
+      "name": "Sweet Violet Wedding Basket",
+      "category": "Wedding Collection",
+      "price": 1150,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=600",
+      "description": "A rustic flower girl basket filled with purple sweet peas and white spray roses.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 56,
+      "name": "Groom's Special Rose Set",
+      "category": "Wedding Collection",
+      "price": 650,
+      "stock": 23,
+      "image": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=600",
+      "description": "A collection of 6 matching red rose boutonnieres with green details.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 57,
+      "name": "Lush Potted Monstera",
+      "category": "Indoor Plants",
+      "price": 780,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&q=80&w=600",
+      "description": "A healthy, wide-leafed Monstera Deliciosa in a premium white ceramic planter.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 58,
+      "name": "Vibrant Succulent Garden",
+      "category": "Indoor Plants",
+      "price": 480,
+      "stock": 0,
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=600",
+      "description": "A selection of 5 miniature succulents arranged in a shallow stone dish.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 59,
+      "name": "Fiddle Leaf Fig Tower",
+      "category": "Indoor Plants",
+      "price": 1600,
+      "stock": 7,
+      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=600",
+      "description": "A tall, majestic Fiddle Leaf Fig tree in a premium woven seagrass basket.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 60,
+      "name": "Emerald Snake Plant Pot",
+      "category": "Indoor Plants",
+      "price": 650,
+      "stock": 10,
+      "image": "https://images.unsplash.com/photo-1583121274-0538596ea900?auto=format&fit=crop&q=80&w=600",
+      "description": "A sturdy, air-purifying Snake Plant in a modern grey concrete pot.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 61,
+      "name": "Jumbo Potted Boston Fern",
+      "category": "Indoor Plants",
+      "price": 550,
+      "stock": 13,
+      "image": "https://images.unsplash.com/photo-1507504038482-7621ef58325f?auto=format&fit=crop&q=80&w=600",
+      "description": "A lush, cascading Boston Fern plant in an elegant hanging terracotta pot.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 62,
+      "name": "Peace Lily Oasis Planter",
+      "category": "Indoor Plants",
+      "price": 690,
+      "stock": 16,
+      "image": "https://images.unsplash.com/photo-1525498128397-f29f828a500f?auto=format&fit=crop&q=80&w=600",
+      "description": "A beautiful Peace Lily plant with elegant white blooms in a self-watering pot.",
+      "featured": false,
+      "isFeatured": false
+    },
+    {
+      "id": 63,
+      "name": "Dwarf Jade Bonsai Tree",
+      "category": "Indoor Plants",
+      "price": 1100,
+      "stock": 19,
+      "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=600",
+      "description": "An artfully trained Jade Bonsai tree in a traditional blue ceramic bonsai dish.",
+      "featured": true,
+      "isFeatured": true
+    },
+    {
+      "id": 64,
+      "name": "Aesthetic Pothos Totem",
+      "category": "Indoor Plants",
+      "price": 580,
+      "stock": 22,
+      "image": "https://images.unsplash.com/photo-1545167622-c51a7b7215ae?auto=format&fit=crop&q=80&w=600",
+      "description": "A climbing Golden Pothos plant trained on a natural coco-coir moss pole.",
+      "featured": false,
+      "isFeatured": false
+    }
+  ]
+}

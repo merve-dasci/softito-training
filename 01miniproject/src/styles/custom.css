@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Color Palette */
+  --bloom-primary: #D8A7B1;
+  --bloom-secondary: #F3D9D2;
+  --bloom-accent: #B76E79;
+  --bloom-beige: #EAD7C0;
+  --bloom-bg: #FFF8F3;
+  --bloom-card-bg: #FFFFFF;
+  --bloom-text-primary: #3F2D2D;
+  --bloom-text-secondary: #8A6F6F;
+  --bloom-success: #6F9E7D;
+  --bloom-warning: #D4A373;
+  --bloom-error: #C76A6A;
+
+  /* Typography */
+  --bloom-font-primary: 'Playfair Display', serif;
+  --bloom-font-secondary: 'Poppins', sans-serif;
+
+  /* Shadows */
+  --bloom-shadow: 0 10px 30px rgba(63, 45, 45, 0.05);
+  --bloom-shadow-hover: 0 15px 40px rgba(63, 45, 45, 0.1);
+
+  /* Border Radii */
+  --bloom-radius-btn: 30px;
+  --bloom-radius-card: 20px;
+  --bloom-radius-input: 14px;
+  --bloom-radius-img: 20px;
+}
+
+body {
+  background-color: var(--bloom-bg);
+  color: var(--bloom-text-primary);
+  font-family: var(--bloom-font-secondary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .display-font {
+  font-family: var(--bloom-font-primary);
+  color: var(--bloom-text-primary);
+  font-weight: 700;
+}
+
+/* Base custom style elements */
+.text-bloom-accent {
+  color: var(--bloom-accent) !important;
+}
+
+.text-bloom-muted {
+  color: var(--bloom-text-secondary) !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bloom-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.bloom-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Buttons */
+.bloom-btn-primary {
+  background-color: var(--bloom-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--bloom-radius-btn);
+  padding: 12px 30px;
+  font-weight: 500;
+  font-family: var(--bloom-font-secondary);
+  font-size: 0.95rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(216, 167, 177, 0.3);
+}
+
+.bloom-btn-primary:hover {
+  background-color: var(--bloom-accent);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(183, 110, 121, 0.4);
+}
+
+.bloom-btn-secondary {
+  background-color: transparent;
+  color: var(--bloom-accent);
+  border: 2px solid var(--bloom-primary);
+  border-radius: var(--bloom-radius-btn);
+  padding: 10px 28px;
+  font-weight: 500;
+  font-family: var(--bloom-font-secondary);
+  font-size: 0.95rem;
+  transition: all 0.35s ease;
+}
+
+.bloom-btn-secondary:hover {
+  background-color: var(--bloom-secondary);
+  color: var(--bloom-text-primary);
+  border-color: var(--bloom-secondary);
+  transform: translateY(-2px);
+}
+
+/* Image containers with zoom effects */
+.bloom-img-container {
+  overflow: hidden;
+  border-radius: var(--bloom-radius-img);
+  position: relative;
+  background-color: var(--bloom-secondary);
+}
+
+.bloom-img-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloom-img-container:hover img {
+  transform: scale(1.06);
+}
+
+/* Custom Cards */
+.bloom-card {
+  background-color: var(--bloom-card-bg);
+  border: none;
+  border-radius: var(--bloom-radius-card);
+  box-shadow: var(--bloom-shadow);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.bloom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--bloom-shadow-hover);
+}
+
+.bloom-category-card {
+  position: relative;
+  background-color: var(--bloom-card-bg);
+  border-radius: var(--bloom-radius-card);
+  box-shadow: var(--bloom-shadow);
+  padding: 24px;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.bloom-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--bloom-shadow-hover);
+  border-color: var(--bloom-secondary);
+}
+
+.bloom-category-card .icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--bloom-secondary);
+  color: var(--bloom-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: all 0.35s ease;
+}
+
+.bloom-category-card:hover .icon-wrap {
+  background-color: var(--bloom-primary);
+  color: #FFFFFF;
+}
+
+/* Inputs */
+.bloom-input {
+  border-radius: var(--bloom-radius-input);
+  border: 1px solid var(--bloom-secondary);
+  padding: 12px 16px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.bloom-input:focus {
+  border-color: var(--bloom-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(216, 167, 177, 0.25);
+}
+
+/* Badges */
+.bloom-badge {
+  background-color: var(--bloom-secondary);
+  color: var(--bloom-accent);
+  font-weight: 600;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  display: inline-block;
+}
+
+/* Layout Utilities */
+.bloom-sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: rgba(255, 248, 243, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(243, 217, 210, 0.6);
+}
+
+.bloom-footer {
+  background-color: var(--bloom-card-bg);
+  border-top: 1px solid var(--bloom-secondary);
+}
+
+/* Banner Design */
+.bloom-campaign-banner {
+  background-color: var(--bloom-secondary);
+  border-radius: var(--bloom-radius-card);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--bloom-shadow);
+  border: 1px solid rgba(216, 167, 177, 0.2);
+}
+
+.bloom-campaign-banner::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(216, 167, 177, 0.15);
+  pointer-events: none;
+}
+
+.bloom-campaign-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(183, 110, 121, 0.08);
+  pointer-events: none;
+}
