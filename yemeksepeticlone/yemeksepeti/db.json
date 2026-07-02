@@ -1,0 +1,672 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Merve Daşcı",
+      "email": "admin@test.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Ahmet Yılmaz",
+      "email": "customer@test.com",
+      "password": "123456",
+      "role": "customer"
+    },
+    {
+      "id": "3",
+      "name": "Can Demir",
+      "email": "owner@test.com",
+      "password": "123456",
+      "role": "user",
+      "restaurantId": "1"
+    }
+  ],
+  "restaurants": [
+    {
+      "ownerId": "3",
+      "name": "Burger House",
+      "category": "Burger",
+      "rating": 4.8,
+      "deliveryTime": "20-30 dk",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+      "status": "passive",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Pizza Bella",
+      "category": "Pizza",
+      "rating": 4.6,
+      "deliveryTime": "25-35 dk",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "3",
+      "name": "Dönerci Ali",
+      "category": "Döner",
+      "rating": 4.5,
+      "deliveryTime": "15-25 dk",
+      "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "4",
+      "name": "Kebapçı Celal",
+      "category": "Kebap",
+      "rating": 4.9,
+      "deliveryTime": "30-40 dk",
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "5",
+      "name": "Sweet Paradise",
+      "category": "Tatlı",
+      "rating": 4.7,
+      "deliveryTime": "15-20 dk",
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "name": "Cheeseburger Menü",
+      "description": "Klasik cheeseburger, çıtır patates kızartması ve soğuk içecek",
+      "price": 240,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "2",
+      "restaurantId": "1",
+      "name": "Double Bacon Burger",
+      "description": "İki kat dana köfte, cheddar peyniri, füme bacon ve özel sos",
+      "price": 310,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "3",
+      "restaurantId": "2",
+      "name": "Margherita Pizza",
+      "description": "Özel domates sosu, mozzarella peyniri ve taze fesleğen",
+      "price": 190,
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "4",
+      "restaurantId": "2",
+      "name": "Super Karışık Pizza",
+      "description": "Salam, sosis, sucuk, zeytin, mısır, mantar ve biber",
+      "price": 260,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "5",
+      "restaurantId": "3",
+      "name": "Et Döner Dürüm",
+      "description": "Lavaş ekmeğine sarılı nefis yaprak et döner, isteğe göre yeşillik ve sos",
+      "price": 160,
+      "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "6",
+      "restaurantId": "3",
+      "name": "İskender Kebap",
+      "description": "Tereyağlı ve soslu et döner, altında kızarmış pide, yanında yoğurt ile",
+      "price": 290,
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "7",
+      "restaurantId": "4",
+      "name": "Adana Kebap",
+      "description": "Zırh kıyması kebap, közlenmiş domates ve biber, sumaklı soğan salatası ile",
+      "price": 270,
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "8",
+      "restaurantId": "5",
+      "name": "Antep Fıstıklı Künefe",
+      "description": "Sıcak şerbetli kadayıf, erimiş özel peynir ve bol Antep fıstığı",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "userId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Burger House",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Cheeseburger Menü",
+          "quantity": 1,
+          "price": 240
+        }
+      ],
+      "totalPrice": 240,
+      "status": "İptal edildi",
+      "date": "2026-07-02"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "1",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Burger House",
+      "items": [
+        {
+          "itemId": "2",
+          "cartItemId": "product-2",
+          "name": "Double Bacon Burger",
+          "quantity": 1,
+          "price": 310,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 310,
+      "status": "Teslim edildi",
+      "date": "2026-07-02",
+      "id": "5rEhtk4HbLI"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "items": [
+        {
+          "itemId": "3",
+          "cartItemId": "product-3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "p5Ky6Pg6kjo"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "1",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Burger House",
+      "items": [
+        {
+          "itemId": "1",
+          "cartItemId": "product-1",
+          "name": "Cheeseburger Menü",
+          "quantity": 1,
+          "price": 240,
+          "itemType": "product"
+        },
+        {
+          "itemId": "2",
+          "cartItemId": "product-2",
+          "name": "Double Bacon Burger",
+          "quantity": 1,
+          "price": 310,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 550,
+      "status": "Teslim edildi",
+      "date": "2026-07-02",
+      "id": "NoHEUWSvkjk"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "7KO42r5Isz8"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "TkABA0a_mv4"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "chlE5SzU3ps"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "paymentMethod": "cash_on_delivery",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "GSeFPe3egSc"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "paymentMethod": "cash_on_delivery",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "wuzsceGXqdc"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "paymentMethod": "card_on_delivery",
+      "items": [
+        {
+          "itemId": "4",
+          "name": "Super Karışık Pizza",
+          "quantity": 1,
+          "price": 260,
+          "itemType": "product"
+        },
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 450,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "tSrEPezhudY"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "paymentMethod": "cash_on_delivery",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "jykb3LHhI4A"
+    },
+    {
+      "userId": "2",
+      "restaurantId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "restaurantName": "Pizza Bella",
+      "paymentMethod": "online",
+      "deliveryAddress": "Karanfil Sokak, No: 12, Daire: 4, Kadıköy / İstanbul",
+      "addressTitle": "Ev",
+      "items": [
+        {
+          "itemId": "3",
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 190,
+          "itemType": "product"
+        }
+      ],
+      "totalPrice": 190,
+      "status": "Hazırlanıyor",
+      "date": "2026-07-02",
+      "id": "tW2Ka8gazHg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Burger"
+    },
+    {
+      "id": "2",
+      "name": "Pizza"
+    },
+    {
+      "id": "3",
+      "name": "Döner"
+    },
+    {
+      "id": "4",
+      "name": "Kebap"
+    },
+    {
+      "id": "5",
+      "name": "Tatlı"
+    }
+  ],
+  "drinks": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "name": "Coca-Cola",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "2",
+      "restaurantId": "1",
+      "name": "Fanta",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "3",
+      "restaurantId": "1",
+      "name": "Sprite",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1626379616459-b2ce1d9decbc?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "4",
+      "restaurantId": "2",
+      "name": "Coca-Cola",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "5",
+      "restaurantId": "2",
+      "name": "Fanta",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "6",
+      "restaurantId": "2",
+      "name": "Sprite",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1626379616459-b2ce1d9decbc?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "7",
+      "restaurantId": "3",
+      "name": "Ayran",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "8",
+      "restaurantId": "3",
+      "name": "Şalgam Suyu",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "9",
+      "restaurantId": "3",
+      "name": "Coca-Cola",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "10",
+      "restaurantId": "4",
+      "name": "Ayran",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "11",
+      "restaurantId": "4",
+      "name": "Şalgam Suyu",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "12",
+      "restaurantId": "4",
+      "name": "Coca-Cola",
+      "price": 45,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "13",
+      "restaurantId": "5",
+      "name": "Türk Kahvesi",
+      "price": 55,
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "14",
+      "restaurantId": "5",
+      "name": "Çay",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "15",
+      "restaurantId": "5",
+      "name": "Limonata",
+      "price": 40,
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+  "sauces": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "name": "Ketçap",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd46f?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "2",
+      "restaurantId": "1",
+      "name": "Mayonez",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "3",
+      "restaurantId": "1",
+      "name": "Ranch Sos",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "4",
+      "restaurantId": "2",
+      "name": "Ketçap",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd46f?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "5",
+      "restaurantId": "2",
+      "name": "Mayonez",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "6",
+      "restaurantId": "2",
+      "name": "Sarımsaklı Mayonez",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "7",
+      "restaurantId": "3",
+      "name": "Ketçap",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd46f?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "8",
+      "restaurantId": "3",
+      "name": "Mayonez",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "9",
+      "restaurantId": "3",
+      "name": "Acı Sos",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "10",
+      "restaurantId": "4",
+      "name": "Ketçap",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd46f?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "11",
+      "restaurantId": "4",
+      "name": "Mayonez",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "12",
+      "restaurantId": "4",
+      "name": "Nar Ekşisi",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "13",
+      "restaurantId": "5",
+      "name": "Çikolata Sosu",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "14",
+      "restaurantId": "5",
+      "name": "Karamel Sos",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": "15",
+      "restaurantId": "5",
+      "name": "Fıstık Ezmesi",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "restaurantId": "1",
+      "userId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "ratingSpeed": 9,
+      "ratingService": 9,
+      "ratingTaste": 10,
+      "comment": "Burgerler harika ve sıcacıktı!",
+      "date": "2026-07-02"
+    },
+    {
+      "id": "2",
+      "restaurantId": "1",
+      "userId": "2",
+      "customerName": "Ahmet Yılmaz",
+      "ratingSpeed": 8,
+      "ratingService": 9,
+      "ratingTaste": 9,
+      "comment": "Teslimat hızlıydı, malzemeler bol.",
+      "date": "2026-07-02"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "2",
+      "restaurantId": "1",
+      "id": "wX5qbOvZWFw"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "1",
+      "userId": "2",
+      "title": "Ev",
+      "detail": "Karanfil Sokak, No: 12, Daire: 4, Kadıköy / İstanbul"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "title": "İş",
+      "detail": "Büyükdere Caddesi, Plaza No: 195, Kat: 8, Levent / İstanbul"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

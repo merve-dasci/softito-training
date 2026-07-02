@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #7A1E2C;
+  --color-secondary: #4A0F1C;
+  --color-background: #0B0B0F;
+  --color-card: #17171C;
+  --color-border-dark: #2e303a;
+  --color-accent: #B83246;
+}
+
+:root {
+  --bg: #0B0B0F;
+  --bg-card: #17171C;
+  --border: #2e303a;
+  --primary: #7A1E2C;
+  --accent: #B83246;
+  --text-primary: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #0B0B0F;
+  color: #D1D5DB;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F1F27;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1E2C;
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(23, 23, 28, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(46, 48, 58, 0.5);
+}
+
+/* Forms override styling */
+input, select, textarea {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #B83246 !important;
+  box-shadow: 0 0 0 2px rgba(184, 50, 70, 0.2);
+}
+
+/* Card image overlay gradients */
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(11, 11, 15, 0.95) 0%, rgba(11, 11, 15, 0.4) 60%, transparent 100%);
+}
+
+.gradient-overlay-card {
+  background: linear-gradient(to top, rgba(23, 23, 28, 0.95) 0%, rgba(23, 23, 28, 0.3) 60%, transparent 100%);
+}
+
+/* 3D Card Flipping Styles */
+.card-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 320px;
+  height: 190px;
+  margin: 0 auto 24px auto;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.card-container.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(46, 48, 58, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #7A1E2C 0%, #17171C 100%);
+  color: white;
+  padding: 22px;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #17171C 0%, #0B0B0F 100%);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 22px 0;
+}
